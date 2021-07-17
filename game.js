@@ -22,15 +22,25 @@ clickIndex = -1;
 // This event listener for keyboard button press is for starting the game when it is over
 document.addEventListener("keydown", (e) => {
     if (level == 0 && e.key == "Enter") {
-        hideRules();
-        showGame();
-        h1.innerText = "Level 1";
-        h1.style.fontSize = "3rem";
-        setTimeout(() => {
-            chooseColor();
-        }, 1000);
+        startGame();
     }
 });
+
+document.addEventListener("touchstart", () => {
+    if (level == 0) {
+        startGame();
+    }
+});
+
+function startGame() {
+    hideRules();
+    showGame();
+    h1.innerText = "Level 1";
+    h1.style.fontSize = "3rem";
+    setTimeout(() => {
+        chooseColor();
+    }, 1000);
+}
 
 function hideRules() {
     rules = document.getElementById("rules");
@@ -120,7 +130,7 @@ function nextlevel() {
 }
 
 function gameOver() {
-    h1.innerText = "Game Over. Your score: " + (level - 1) + ". Press Enter button to start again.";
+    h1.innerText = "Game Over. Your score: " + (level - 1) + ". Press Enter button or touch the screen to start again.";
     h1.style.fontSize = "2rem";
     audio = new Audio("sounds/wrong.mp3");
     body = document.querySelector("body");
