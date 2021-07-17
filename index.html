@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="level-title">Press Enter Key to Start</h1>
+    <div id="rules">
+        <h2>Instructions</h2>
+        <ul id="ruleslist">
+            <li class="rule-1">This is a game where we test your memory.</li>
+            <li class="rule-2">In this game, a color will be chosen at random and shown to you.</li>
+            <li class="rule-3">After the color has been chosen, you need to click the colors in the sequence that they have been chosen by the game.</li>
+            <li class="rule-4">Keep in mind that once you pass level 1, only the new selected color will be shown to you, but <strong>you need to click the colors in the sequence with which it started.</strong></li>
+            <li class="rule-5">Eg. If the game selects the color red in the first level, and then it selects the color green in the second level, you will need to click red first, followed by green. Similarly, if in the next level, the game selects color red again, you
+                need to click in the sequence red - green - red.</li>
+            <li class="rule-6">Keep going as long as you can remember the sequence.</li>
+            <li class="rule-7">As soon as you press the wrong button/color, the game is over.</li>
+        </ul>
+        <h3>Are you up for the challenge?</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div type="button" id="green" class="btn green">
+            </div>
+            <div type="button" id="red" class="btn red">
+            </div>
+        </div>
+        <div class="row">
+            <div type="button" id="yellow" class="btn yellow">
+            </div>
+            <div type="button" id="blue" class="btn blue">
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
